@@ -1,0 +1,5 @@
+inputText = vectorizer('You freaking suck!')
+batch = test.as_numpy_iterator().next()
+batch_X,batch_Y = test.as_numpy_iterator().next()
+(model.predict(batch_X)>0.5).astype(int)
+res = model.predict(np.expand_dims(inputText,0))
